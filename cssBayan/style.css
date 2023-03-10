@@ -4,3 +4,15 @@
   box-sizing: border-box;
 }
 
+.wrapper{
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../assets/img/1592237540_Guide-Raid-Shadow-Legends.jpg');
+  padding: 5%;
+}
+
+.accordion{
+  width: 100%;
+  border: 1px solid red;
+}
