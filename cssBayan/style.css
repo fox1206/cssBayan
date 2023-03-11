@@ -41,7 +41,7 @@ body{
 }
 
 .accordion__item{
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0px auto;
   padding-bottom: 15px;
   border-top: 1px solid var(--color-light-blue);
@@ -88,6 +88,32 @@ body{
 .accordion__input:checked ~ .accordion__title{
   color: var(--color-blue);
   text-shadow: 0 0 15px var(--color-light-blue), -1px 0 1px var(--color-blue);
+}
+
+@media screen and (min-width: 1920px) {
+  .accordion__item{
+    min-width: 1000px;
+    color: red;
+  }
+
+  .wrapper h1{
+    font-size: 45px;
+  }
+
+  .accordion__title{
+    font-size: 28px;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .wrapper h1{
+    font-size: 28px;
+  }
+
+  .accordion__title{
+    font-size: 14px;
+  }
 }
 
 
