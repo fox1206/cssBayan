@@ -4,15 +4,75 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-  height: 100vh;
+:root{
+  /* --text-title-color: rgb(106,240,252); */
+  --text-title-color: rgb(54,78,112);
+  --color-blue: #58dcf7;
+  --color-light-blue: rgb(181,250,244);
+  --color-white: #fff;
+}
+
+body{
+  user-select: none;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../assets/img/1592237540_Guide-Raid-Shadow-Legends.jpg');
+}
+
+.wrapper{
+  height: 100vh;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper h1{
+  margin: 0 0 30px 0;
+  letter-spacing: 5px;
+  color: var(--text-title-color);
+  text-shadow: 0 0 15px var(--color-light-blue), -1px 0 1px var(--color-blue);
 }
 
 .accordion{
   width: 100%;
-  border: 1px solid red;
+}
+
+.accordion__item{
+  max-width: 600px;
+  margin: 0px auto;
+  border-top: 1px solid var(--color-light-blue);
+  cursor: pointer;
+}
+
+.accordion__block{
+  display: none;
+  width: 100%;
+}
+
+.accordion__input{
+  appearance: none;
+}
+
+.accordion__picture{
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(181,250,244,0.25), 0 10px 10px rgba(54,78,112,0.25);
+  width: 90%;
+  background-size: auto;
+}
+
+.accordion__title{
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.accordion__input:checked + .accordion__block{
+  display: block;
 }
