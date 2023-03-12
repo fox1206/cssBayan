@@ -10,6 +10,7 @@
   --color-blue: #58dcf7;
   --color-light-blue: rgb(181,250,244);
   --color-white: #fff;
+  --color-red: rgb(255, 0, 0);
 }
 
 body{
@@ -68,11 +69,17 @@ body{
 }
 
 .accordion__title{
+  position: relative;
   display: block;
   font-size: 18px;
   letter-spacing: 2px;
   color: var(--color-white);
   cursor: pointer;
+}
+
+.accordion__title span{
+  position: absolute;
+  right: 0;  
 }
 
 .accordion__title:hover{
@@ -88,6 +95,12 @@ body{
 .accordion__input:checked ~ .accordion__title{
   color: var(--color-blue);
   text-shadow: 0 0 15px var(--color-light-blue), -1px 0 1px var(--color-blue);
+}
+
+.accordion__input:checked ~ .accordion__title span{
+  color: var(--color-blue);
+  text-shadow: none;
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 320px) {
