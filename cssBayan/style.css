@@ -9,7 +9,6 @@
   --color-blue: #58dcf7;
   --color-light-blue: rgb(181,250,244);
   --color-white: #fff;
-  --color-red: rgb(255, 0, 0);
 }
 
 body{
@@ -21,8 +20,11 @@ body{
 }
 
 .wrapper{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
   height: 100vh;
-  padding: 2% 5%;
+  padding: 4% 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +32,7 @@ body{
 
 .wrapper h1{
   font-size: 2.5rem;
-  padding: 0.625rem 0 1.25rem 0;
+  /* padding: 0.625rem 0 1.25rem 0; */
   letter-spacing: 0.313rem;
   color: var(--text-title-color);
   text-shadow: 0 0 0.938rem var(--color-light-blue), -0.063rem 0 0.063rem var(--color-blue);
@@ -41,19 +43,34 @@ body{
   margin: 1.875rem 0;
 }
 
+.accordion:hover .accordion__title{
+  /* color: wheat; */
+  color: var(--color-light-blue);
+  text-shadow: 0 0 15px var(--color-light-blue), -1px 0 1px var(--color-blue);
+}
+
+.accordion__title span{
+  opacity: 0;
+}
+
+.accordion:hover .accordion__title span{
+  opacity: 1;
+}
+
 .accordion__input{
   appearance: none;
 }
 
 .accordion__label{
+  color: var(--color-white);
   cursor: pointer;
 }
 
 .accordion__item{
   max-width: 37.5rem; /*600px*/
   margin: 0 auto;
-  /* padding-bottom: 0.94rem; */
-  /* border-top: 0.063rem solid var(--color-light-blue); */
+  padding-bottom: 0.94rem;
+  border-top: 0.063rem solid var(--color-light-blue);
   cursor: pointer;
 }
 
@@ -65,7 +82,6 @@ body{
   align-items: center;
   letter-spacing: 0.125rem;
   /* border-top: 0.063rem solid var(--color-light-blue);  */
-  color: var(--color-white);
 }
 
 .accordion__title:hover{
@@ -77,6 +93,7 @@ body{
 .accordion__block{
   display: flex;
   justify-content: center;
+  opacity: 0;
 }
 
 .accordion__picture{
@@ -116,52 +133,54 @@ body{
   transition: .3s;
 }
 
+.accordion__input:checked + .accordion__label .accordion__block{
+  max-height: 80%;
+  transition: 1s;
+  opacity: 1;
+}
+
 .accordion__input:hover + .accordion__label .accordion__block{
   max-height: 80%;
+  transition: 1s ease-in;
+  opacity: 1;
 }
 
 
+footer div{
+  display: flex;
+  
+}
 
-
-
-
-
-
-
-
-/* 
-
-
-.accordion__input:hover ~ .accordion__block
+.logo
 {
-  display: block;
-}
-
-.accordion__input:hover ~ .accordion__title span{
-  color: var(--color-blue);
-  text-shadow: none;
-  transform: rotate(180deg);
+  width: 100px;
+  height: 100px;
 }
 
 @media screen and (max-width: 820px) {
   .wrapper h1{
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
-  .accordion__title{
-    font-size: 18px;
+  .accordion__title h2{
+    font-size: 1.125rem;
+  }
+
+  .accordion__title span{
+    opacity: 1;
   }
 }
 
 @media screen and (max-width: 320px) {
   .wrapper h1{
-    font-size: 26px;
+    font-size: 1.3rem;
   }
 
-  .accordion__title{
-    font-size: 14px;
+  .accordion__title h2{
+    font-size: 0.875rem;
+  }
+
+  .accordion__title span{
+    opacity: 1;
   }
 } 
-
-
- */
