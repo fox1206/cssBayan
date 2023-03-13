@@ -116,6 +116,9 @@ body{
   transition: .3s;
 }
 
+.accordion__input:hover + .accordion__label .accordion__block{
+  max-height: 80%;
+}
 
 
 
