@@ -93,10 +93,6 @@ footer div{
 }
 
 /* ------------------------------------------checked - effect------------------------------------------ */
-.accordion__input:checked + .accordion__label .accordion__block{
-  max-height: 80%;
-}
-
 .accordion__input:checked ~ .accordion__label .accordion__title{
   color: var(--color-light-blue);
   text-shadow: 0 0 0.938rem var(--color-light-blue), -0.063rem 0 0.063rem var(--color-blue);
@@ -154,7 +150,6 @@ footer div{
 /* ------------------------------------------hover - hover------------------------------------------ */
 @media (hover: hover){
   .accordion:hover .accordion__title{
-    /* color: wheat; */
     color: var(--color-light-blue);
     text-shadow: 0 0 0.938rem var(--color-light-blue), -0.063rem 0 0.063rem var(--color-blue);
   }
@@ -178,7 +173,7 @@ footer div{
   
   .accordion__input:hover + .accordion__label .accordion__block{
     max-height: 80%;
-    transition: 1s ease-in;
+    transition: .3s ease-in;
     opacity: 1;
   }
 }
